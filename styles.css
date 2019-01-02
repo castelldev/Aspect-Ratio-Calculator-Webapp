@@ -1,0 +1,100 @@
+:root {
+    --input-height: 30px;
+    color: #cdd6d0;
+    font-family: "Open Sans";
+  }
+  :placeholder {
+    color: #22282370;
+  }
+  header {
+    text-align: center;
+  }
+  #main-container {
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr;
+    grid-template-rows: repeat(2, 50px);
+    grid-gap: 5px;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 4px 4px 12px #666b6a90;
+    background: #666b6a;
+    padding: 10px;
+    width: 350px;
+    height: 220px;
+  }
+  label {
+    justify-self: flex-end;
+    align-self: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: monospace;
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    height: 50px;
+    align-items: center;
+  }
+  .input {
+    display: inline-block;
+    border-radius: 3px;
+    border: solid #96969650 0px;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    background: Gainsboro;
+    color: #222823;
+    width: 160px;
+    height: var(--input-height);
+    transition: background 1s ease;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .floater {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 165px;
+    margin: auto;
+    border-radius: 50%;
+    border: none;
+    width: var(--input-height);
+    height: var(--input-height);
+    background: #22282370;
+    transition: top 500ms ease 500ms, width 100ms linear,
+      border-radius 100ms linear, -webkit-transform 300ms ease;
+    transition: top 500ms ease 500ms, transform 300ms ease, width 100ms linear,
+      border-radius 100ms linear;
+    transition: top 500ms ease 500ms, transform 300ms ease, width 100ms linear,
+      border-radius 100ms linear, -webkit-transform 300ms ease;
+  }
+  
+  .reveal {
+    top: 450%;
+    -webkit-transform: translateX(-165px);
+            transform: translateX(-165px);
+    width: 160px;
+    border-radius: 3px;
+    background: Gainsboro;
+    transition: top 500ms ease, width 300ms ease-in-out 800ms, background 200ms ease-out 0s,
+      border-radius 100ms linear 800ms, -webkit-transform 300ms ease 500ms;
+    transition: top 500ms ease, transform 300ms ease 500ms,
+      width 300ms ease-in-out 800ms, background 200ms ease-out 0s,
+      border-radius 100ms linear 800ms;
+    transition: top 500ms ease, transform 300ms ease 500ms,
+      width 300ms ease-in-out 800ms, background 200ms ease-out 0s,
+      border-radius 100ms linear 800ms, -webkit-transform 300ms ease 500ms;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  

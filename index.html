@@ -1,0 +1,34 @@
+<head>
+    <title>Aspect Ratio Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Aspect Ratio Calculator</h1>
+    </header>
+
+    <main id="main-container">
+        <label for="input-width">Width:</label>
+        <div class="input-container">
+            <input type="number" class="input" id="input-width" name="input-width" placeholder="Enter Width" oninput="focusOnInput('input-width')"
+                tabindex="1" required />
+            <input type="number" class="floater" id="input-new-width" name="input-new-width" placeholder="" oninput="calcAspect('height')"
+                required tabindex="3" disabled />
+        </div>
+        <label for="input-height">Height:</label>
+        <div class="input-container">
+            <input type="number" class="input" id="input-height" name="input-height" placeholder="Enter Height" oninput="focusOnInput('input-height')"
+                tabindex="2" required />
+            <input type="number" class="floater" id="input-new-height" name="input-new-height" placeholder="" oninput="calcAspect('width')"
+                required tabindex="4" disabled />
+        </div>
+    </main>
+
+    <footer>
+        <span>Minimal design by Franklin Castellanos</span>
+        <span>&copy; Castell 2018</span>
+    </footer>
+    <script src="aspect-ratio.js"></script>
+</body>
